@@ -11,6 +11,7 @@ import org.springframework.web.client.RestTemplate;
 @SpringBootApplication
 public class ConsumerMovieApplication {
   @Bean
+  // 添加LoadBalanced注解，即可整合Ribbon。使其具备负载均衡的能力
   @LoadBalanced
   public RestTemplate restTemplate() {
     return new RestTemplate();
